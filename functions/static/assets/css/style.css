@@ -1,0 +1,287 @@
+body {
+    overflow-x: hidden !important;
+}
+
+.navbar {
+    background: #65ac5b !important;
+    color: #fff;
+}
+
+.navbar-brand {
+    font-size: 2.8rem;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.header-image {
+    position: absolute;
+    left: 305px;
+}
+
+.languages-div {
+    background-color: #ffffff;
+    height: 55px;
+    z-index: 1;
+}
+
+.form-inline button {
+    font-size: 1.3rem;
+    border: 3px solid #ffffff;
+    color: #ffffff;
+    border-radius: 10px;
+    margin: 0.2rem;
+}
+
+.embeddata {
+    width: 100%;
+    height: 100vh !important;
+    top: -5px;
+    margin: 0 auto;
+    overflow: hidden !important;
+    border: none !important;
+    z-index: 0;
+}
+
+.gift,
+.gift2 {
+    width: 450px;
+    height: 510px;
+    background: #fff;
+    overflow: hidden !important;
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    display: none;
+    -webkit-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.diary,
+.diary2 {
+    width: 450px;
+    height: 510px;
+    background: #fff;
+    overflow: auto !important;
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    display: none;
+    -webkit-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+#q1input,
+#q2input,
+#q3input {
+  opacity: 0;
+  width: 0;
+  float: left;
+}
+
+.form-group {
+    padding-bottom: 15px !important;
+}
+
+.paddingform {
+    padding: 15px;
+}
+
+.thankyou {
+    padding: 15px;
+    padding-top: 45% !important;
+    text-align: center;
+}
+
+.giftheader,
+.giftheader2,
+.diaryheader,
+.diaryheader2 {
+    width: 100%;
+    height: 40px;
+    background: #65ac5b;
+}
+
+.giftheader p,
+.giftheader2 p,
+.diaryheader p,
+.diaryheader2 p {
+    text-align: right;
+    font-size: 1.5rem;
+    margin-right: 12px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.subs {
+    color: #666666;
+    font-size: 0.7rem;
+    font-style: italic;
+    padding-top: -15px;
+}
+
+.subs2 {
+    color: #666666;
+    font-size: 0.8rem;
+    font-style: italic;
+    padding-top: -1 5px;
+}
+
+.flickity-button {
+    background: transparent;
+}
+.flickity-button:focus {
+    outline: 0;
+    box-shadow: none !important;
+}
+
+.flickity-button:disabled {
+    display: none;
+}
+
+.flickity-prev-next-button {
+    width: 20px;
+    height: 20px;
+}
+
+/* icon color */
+.flickity-button-icon {
+    fill: grey;
+}
+
+.flickity-prev-next-button.previous {
+    top: 115px;
+    z-index: 2;
+}
+
+.flickity-prev-next-button.next {
+    top: 115px;
+    left: 140px;
+    z-index: 2;
+}
+
+.paginationslide {
+    top: 13px;
+    font-size: 0.7rem;
+    color: grey;
+    left: 40px;
+    max-width: 250px;
+    position: relative;
+}
+
+.dropdown {
+    -webkit-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 100px;
+    width: 23.8vw !important;	
+    right: 1.1vw !important;
+    background-color: #fff !important;
+    color: grey !important;
+    z-index: 1;
+}
+
+.dropdown button {
+    text-align: left !important;
+}
+
+.dropdown-toggle {	
+    font-size: 0.9rem;	
+    padding: 6px 24px;	
+}
+
+.dropdown-toggle::after {
+    float: right;
+    margin-top: 10px !important;
+}
+
+.hidetitle {
+    display: none !important;
+}
+
+textarea {
+    resize: none;
+}
+
+.flickity-page-dots {
+    display: none;
+}
+
+#second,
+#third,
+#fourth {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .embeddata {
+        padding-right: 1px;
+        width: 100%;
+        height: 100vh !important;
+        top: 35px;
+        margin: 0 auto;
+        overflow: hidden !important;
+        border: none !important;
+    }
+
+    .gift,
+    .gift2 {
+        width: 100% !important;
+        height: 510px;
+        left: 0 !important;
+        z-index: 2;
+    }
+
+    .diary,
+    .diary2 {
+        width: 100% !important;
+        height: 510px;
+        left: 0 !important;
+        z-index: 2;
+    }
+
+    .form-inline button {
+        font-size: 0.7rem;
+        border: 1px solid #ffffff;
+        border-radius: 10px;
+        margin: 0.2rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.8rem;
+        text-transform: capitalize;
+        font-weight: 600;
+    }
+    .header-image {
+        position: unset !important;
+    }
+    .languages-div {
+        background-color: #ffffff;
+        height: 15px;
+        z-index: 1;
+    }
+
+    .dropdown {
+        top: 171px;
+        min-width: 180px;
+        background-color: #fff !important;
+        color: grey !important;
+        z-index: 1;
+    }
+
+    .flickity-prev-next-button.previous {
+        top: 188px;
+        z-index: 2;
+    }
+
+    .flickity-prev-next-button.next {
+        top: 188px;
+        left: 140px;
+        z-index: 2;
+    }
+
+}

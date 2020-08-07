@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <meta name="robots" content="noindex" />
+    <meta name="robots" content="nofollow" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/ui-lightness/jquery-ui.css">
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="assets/js/popup.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167422769-5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-167422769-5');
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script> 
+    <script>
+    $(function() {
+    $(".datepicker").datepicker();
+    });
+    </script>
+
+    <title>REFLECT</title>
+</head>
+
+<body>
+    <div>
+        <nav class="navbar">
+            <a class="navbar-brand font-weight-bolder">REFLECT</a>
+            <!-- <img class="header-image" src="http://drive.google.com/uc?export=view&id=1TGhVZClHSlOVFeLxML3P4ucpLCHkCiK-"> -->
+            <form class="form-inline">
+                <button class="btn btn-outline-danger my-2 my-sm-0" type="button" id="diary"
+                    onclick="clearRadio()">write a diary</button>
+                <button class="btn btn-outline-danger my-2 my-sm-0" type="button" id="gift">write a gift
+                    message</button>
+            </form>
+        </nav>
+        <div class="languages-div">
+            <button class="flickity-button flickity-prev-next-button previous" type="button" aria-label="Previous"><svg
+                    class="flickity-button-icon" viewBox="0 0 100 100">
+                    <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path>
+                </svg></button>
+            <div class="paginationslide page1">Home (1/6 pages)</div>
+            <div class="paginationslide page2 hidetitle">Page2 (2/6 pages)</div>
+            <div class="paginationslide page3 hidetitle">Page3 (3/6 pages)</div>
+            <div class="paginationslide page4 hidetitle">Page4 (4/6 pages)</div>
+            <div class="paginationslide page5 hidetitle">Page5 (5/6 pages)</div>
+            <div class="paginationslide page6 hidetitle">Page6 (6/6 pages)</div>
+            <button class="flickity-button flickity-prev-next-button next" type="button" aria-label="Next"><svg
+                    class="flickity-button-icon" viewBox="0 0 100 100">
+                    <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"
+                        transform="translate(100, 100) rotate(180) "></path>
+                </svg></button>
+        </div>
+        <!-- Default dropleft button -->
+        <div class="btn-group dropdown">
+            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                Choose Language
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+                <button class="dropdown-item" type="button" onclick="location.href='main.html'">Original</button>
+                <button class="dropdown-item" type="button" onclick="location.href='thai.html'">Thai</button>
+                <button class="dropdown-item" type="button" onclick="location.href='japanese.html'">Japanese</button>
+                <button class="dropdown-item" type="button" onclick="location.href='english.html'">English</button>
+            </div>
+        </div>
+        <!-- IFrame Body -->
+        <div class="main-carousel" id="english">
+            <!-- Original -->
+            <div class="carousel-cell embeddata">
+                <iframe class="embeddata embedsrc" src="#"></iframe>
+            </div>
+        </div>
+
+        <!-- Gift -->
+        <div class="container">
+            <div class="gift">
+                <div class="giftheader">
+                    <p>x</p>
+                </div>
+                <script type="text/javascript">
+                    var submitted = false;
+                </script>
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {document.getElementById('textclear').value = '';
+                    $('.gift').slideUp(300);}"></iframe>
+
+                <form
+                    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSerW_2wQdhIQNt_cQT1XHex3L9YmwYanPtuikAUphAvjGQ-ow/formResponse"
+                    target="hidden_iframe" onsubmit="submitted=true;" method="POST" class="paddingform">
+                    <div class="form-group">
+                        <label for="Members">A member you want to send a message to</label>
+                        <select class="form-control" name="entry.1440429713" id="Members">
+                            <option value="Jack">Jack</option>
+                            <option value="Noone">Noone</option>
+                            <option value="Pu">Pu</option>
+                            <option value="Hitomi">Hitomi</option>
+                            <option value="Ryo">Ryo</option>
+                            <option value="Am">Am</option>
+                            <option value="Mat">Mat</option>
+                            <option value="Kaew">Kaew</option>
+                            <option value="Best">Best</option>
+                            <option value="Tomo">Tomo</option>
+                            <option value="All">All</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Name">Your Name</label>
+                        <select class="form-control" name="entry.1843622549" id="Name">
+                            <option value="Jack">Jack</option>
+                            <option value="Noone">Noone</option>
+                            <option value="Pu">Pu</option>
+                            <option value="Hitomi">Hitomi</option>
+                            <option value="Ryo">Ryo</option>
+                            <option value="Am">Am</option>
+                            <option value="Mat">Mat</option>
+                            <option value="Kaew">Kaew</option>
+                            <option value="Best">Best</option>
+                            <option value="Tomo">Tomo</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="textclear">Message *</label>
+                        <textarea class="form-control" id="textclear" rows="3" name="entry.1379427797"
+                            placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-block SubmitBtn">Submit</button>
+                </form>
+
+            </div>
+
+            <div class="gift2">
+                <div class="giftheader2">
+                    <p>x</p>
+                </div>
+                <div class="thankyou">
+                    <h3>Thank you for your message!</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Diary -->
+        <div class="container">
+            <div class="diary">
+                <div class="diaryheader">
+                    <p>x</p>
+                </div>
+                <script type="text/javascript">
+                    var submitted = false;
+                </script>
+                <iframe name="hidden_iframe2" id="hidden_iframe2" style="display:none;"
+                    onload="if(submitted) {$('.diary').slideUp(300);clearRadio();}"></iframe>
+
+                <!-- JS -->
+                <form
+                    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdxoezbXMF_M4Ik8wxvgdQfhixLI5Rb5nCLIjwaGHs5ukXaEQ/formResponse"
+                    target="hidden_iframe2" onsubmit="submitted=true;" method="POST" class="paddingform">
+                    <div class="form-group">
+                        <label>Pick a day to write a diary about. *</label>
+                        <input type="text" class="datepicker" name="entry.203309396" value="" id="dateInput" required>	
+                        <!--
+                        <input type="hidden" name="entry.203309396_year" value="" id="year">
+                        <input type="hidden" name="entry.203309396_month" value="" id="month">
+                        <input type="hidden" name="entry.203309396_day" value="" id="day">
+                        -->
+                    </div>
+                    <div class="form-group">
+                        <label>Q1. How was your motivation today? *</label><br>
+                        <div class="text-center"><label class="subs2"><span class="text-danger">Low
+                                    motivated</span> 1 - 2 - 3 - 4 - 5 - 6 <span class="text-success">Highly
+                                    motivated</span></label></div>
+                        <div class="text-center">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="q1" id="q11" value="1"
+                                    data-value="1">
+                                <label class="form-check-label">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="q1" id="q12" value="2"
+                                    data-value="2">
+                                <label class="form-check-label">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="q1" id="q13" value="3"
+                                    data-value="3">
+                                <label class="form-check-label">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="q1" id="q14" value="4"
+                                    data-value="4">
+                                <label class="form-check-label">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="q1" id="q15" value="5"
+                                    data-value="5">
+                                <label class="form-check-label">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="q1" id="q16" value="6"
+                                    data-value="6">
+                                <label class="form-check-label">6</label>
+                            </div>
+                        </div>
+                        <input name="entry.1747016377" value="" id="q1input" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Q2. How did you feel about your achievement against your work goals for the day?
+                            *</label><br>
+                        <div class="text-center"><label class="subs2"><span class="text-danger">Not
+                                    achieved</span> 1 - 2 - 3 - 4 - 5 - 6 <span class="text-success">Achieved a
+                                    lot</span></label></div>
+                        <div class="text-center">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="q2" id="q21" value="1"
+                                    data-value="1">
+                                <label class="form-check-label">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="q2" id="q22" value="2"
+                                    data-value="2">
+                                <label class="form-check-label">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="q2" id="q23" value="3"
+                                    data-value="3">
+                                <label class="form-check-label">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="q2" id="q24" value="4"
+                                    data-value="4">
+                                <label class="form-check-label">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="q2" id="q25" value="5"
+                                    data-value="5">
+                                <label class="form-check-label">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="q2" id="q26" value="6"
+                                    data-value="6">
+                                <label class="form-check-label">6</label>
+                            </div>
+                        </div>
+                        <input name="entry.1922555204" value="" id="q2input" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Q3. How's your body feeling today? *</label><br>
+                        <div class="text-center"><label class="subs2"><span class="text-danger">Unhealthy</span> 1 - 2 -
+                                3 - 4 - 5 - 6 <span class="text-success">Healthy</span></label></div>
+                        <div class="text-center">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="q3" id="q31" value="1"
+                                    data-value="1">
+                                <label class="form-check-label">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="q3" id="q32" value="2"
+                                    data-value="2">
+                                <label class="form-check-label">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="q3" id="q33" value="3"
+                                    data-value="3">
+                                <label class="form-check-label">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="q3" id="q34" value="4"
+                                    data-value="4">
+                                <label class="form-check-label">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="q3" id="q35" value="5"
+                                    data-value="5">
+                                <label class="form-check-label">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="q3" id="q36" value="6"
+                                    data-value="6">
+                                <label class="form-check-label">6</label>
+                            </div>
+                        </div>
+                        <input name="entry.867503377" value="" id="q3input" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Q4: Please reflect what happened today and how you felt about that.</label>
+                        <!-- <label class="subs">Reflecting on what you have done gives you confidence.
+                            Reflecting on your feelings has the effect of calming you down. It is also recommended to
+                            share with your team about the learning or the success factors you found.</label> -->
+                        <textarea class="form-control" id="diaryClear" rows="3" name="entry.1014550479"
+                            placeholder="Your Answer"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Q5: Please write your learning or lesson of today.</label>
+                        <!-- <label class="subs">The subject can be about yourself, a project, a team or a
+                            company. Please think in the viewpoint of ideal image, the current situation and GAP between
+                            them.</label> -->
+                        <textarea class="form-control" id="diaryClear2" rows="3" name="entry.578970229"
+                            placeholder="Your Answer"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Q6: Please write what you want to try as a next action, for improving your work or life.</label>
+                        <!-- <label class="subs">Please try to write a concrete action even if it is a small
+                            action. There are many different approaches to improvement and action.</label> -->
+                        <textarea class="form-control" id="diaryClear3" rows="3" name="entry.36793335"
+                            placeholder="Your Answer"></textarea>
+                    </div>                    
+                    <div class="form-group">
+                        <label>Please write your name (nickname) *</label>
+                        <select class="form-control" name="entry.1223500353" id="Members">
+                            <option value="Jack">Jack</option>
+                            <option value="Noone">Noone</option>
+                            <option value="Pu">Pu</option>
+                            <option value="Hitomi">Hitomi</option>
+                            <option value="Ryo">Ryo</option>
+                            <option value="Am">Am</option>
+                            <option value="Mat">Mat</option>
+                            <option value="Kaew">Kaew</option>
+                            <option value="Best">Best</option>
+                            <option value="Tomo">Tomo</option>
+                            <option value="Test">Test</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-block SubmitBtn" onclick=>Submit</button>
+                </form>
+
+            </div>
+
+            <div class="diary2">
+                <div class="diaryheader2">
+                    <p>x</p>
+                </div>
+                <div class="thankyou">
+                    <h3>Thank you for your message!</h3>
+                </div>
+            </div>
+
+            <!-- Popup -->
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+    <script src="assets/js/dateinput.js"></script>
+    <script src="assets/js/radioinput.js"></script>
+    <script src="assets/js/paginationEnglish.js"></script>
+    <script src="assets/js/pagination.js"></script>
+    <script src="assets/js/clearinput.js"></script>
+    <!-- <script src="assets/js/dropdown.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+html,
+body {
+  font-family: "Roboto", "Helvetica", sans-serif;
+}
+.mdl-grid {
+  max-width: 1024px;
+  margin: auto;
+}
+.mdl-card {
+  min-height: 0;
+  padding-bottom: 5px;
+}
+.mdl-layout__header-row {
+  padding: 0;
+}
+h3 {
+  background: url("firebase-logo.png") no-repeat;
+  background-size: 40px;
+  padding-left: 50px;
+}
+#auth-signed-out-card,
+#auth-signed-in-card {
+  display: none;
+}
+
+#auth-name-container,
+#auth-email-container,
+#auth-uid-container {
+  font-weight: bold;
+}
+#auth-delete-button {
+  margin-left: 20px;
+}
